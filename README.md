@@ -25,24 +25,81 @@ A web-based Employee Management System designed to handle employee registrations
 
 ## Directory Structure
 
-```plaintext
-src/
-├── main/
-│   ├── java/
-│   │   └── com/
-│   │       └── example/
-│   │           └── employeemanagement/
-│   │               ├── controllers/
-│   │               ├── models/
-│   │               ├── services/
-│   │               └── repositories/
-│   ├── resources/
-│   │   ├── templates/
-│   │   │   ├── login.jsp
-│   │   │   ├── register.jsp
-│   │   │   └── welcome.jsp
-│   │   └── application.properties
-│   └── webapp/
-│       └── WEB-INF/
-│           └── jsp/
-└── test/
+![image](https://github.com/user-attachments/assets/fb36d3e5-f033-4891-8336-665b05839b68)
+
+---
+
+
+## Getting Started
+
+### Prerequisites
+
+- Java 17 or later
+- MySQL 8.x
+- Maven 3.x
+
+### Installation
+
+1. Clone the repository.
+   ```bash
+   git clone https://github.com/your-username/employee-management-system.git
+   cd employee-management-system
+2. Set up the database:
+    - Create a database named employee_management.
+    - Update the application.properties file with your database credentials.
+3. Build and run the application:
+    ```bash
+    mvn clean install
+    mvn spring-boot:run
+4. Open the application in your browser:
+     ```bash
+     http://localhost:8080
+
+---
+
+### API Endpoints
+
+| Endpoint           | HTTP Method | Description               |
+|--------------------|-------------|---------------------------|
+| `/login`           | GET, POST   | Employee login page       |
+| `/register`        | GET, POST   | Employee registration page|
+| `/welcome`         | GET         | Welcome page for employees|
+
+
+---
+
+### Screenshots
+1. Login Page
+   
+2. Registration Page
+   
+3. Welcome Page
+
+
+
+---
+
+### Future Improvements
+  - Add admin panel for managing employees.
+  - Include file uploads for employee profiles.
+  - Extend the application with REST APIs.
+
+
+
+
+---
+
+### Contributions   
+   Contributions are welcome! Please open an issue or submit a pull request.
+
+---
+
+### License
+   This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+### Author
+   Pranav Sanjay Manapure
+   - **Email:** manapurepranav03@gmail.com
+   - **LinkedIn:** www.linkedin.com/in/pranav-manapure

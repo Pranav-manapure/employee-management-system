@@ -57,14 +57,60 @@ A web-based Employee Management System designed to handle employee registrations
 
 ---
 
-### API Endpoints
+## API Endpoints
 
-| Endpoint           | HTTP Method | Description               |
-|--------------------|-------------|---------------------------|
-| `/login`           | GET, POST   | Employee login page       |
-| `/register`        | GET, POST   | Employee registration page|
-| `/welcome`         | GET         | Welcome page for employees|
+The following endpoints are available in the application. Each endpoint is associated with a specific functionality of the Employee Management System.
 
+| **Endpoint**       | **HTTP Method** | **Description**                                                                                   |
+|--------------------|-----------------|---------------------------------------------------------------------------------------------------|
+| `/login`           | GET, POST       | Displays the login page (GET). Authenticates the user and redirects to the welcome page on success (POST). |
+| `/register`        | GET, POST       | Displays the registration form (GET). Handles employee registration and redirects to the login page on success (POST). |
+| `/welcome`         | GET             | Displays the welcome page with the logged-in employee's name. Access is restricted to authenticated users. |
+
+### Detailed Explanation
+
+1. **`/login`**
+   - **GET Request**:
+     - When this URL is accessed (e.g., `http://localhost:8080/login`), it renders the **Login Page**.
+     - The page contains fields for `loginId` and `password` and a button to log in.
+   - **POST Request**:
+     - Submitting the login form sends the credentials to the backend.
+     - If the `loginId` and `password` are valid:
+       - The employee's name is passed to the session or model.
+       - The user is redirected to `/welcome`.
+     - If invalid:
+       - The user remains on the login page with an error message.
+
+2. **`/register`**
+   - **GET Request**:
+     - Accessing this URL (e.g., `http://localhost:8080/register`) displays the **Employee Registration Page**.
+     - The form includes fields such as `Name`, `Date of Birth`, `Gender`, `Address`, `City`, `State`, `Login ID`, and `Password`.
+   - **POST Request**:
+     - Submitting the form sends the data to the backend.
+     - A new employee is created in the database if the data is valid.
+     - Upon successful registration:
+       - The user is redirected to `/login` to log in with the newly created credentials.
+
+3. **`/welcome`**
+   - **GET Request**:
+     - When accessed (e.g., `http://localhost:8080/welcome`), this page welcomes the logged-in user.
+     - It fetches the employee's name (e.g., "Welcome, Rohan!") from the session or model.
+     - This page also includes a **Logout Button**, which redirects to `/login` when clicked.
+     - Unauthorized users (not logged in) cannot access this page.
+
+### Usage Example
+
+1. **Login Process**:
+   - Navigate to `/login` and enter credentials.
+   - Upon successful login, you are redirected to `/welcome`.
+
+2. **Registration Process**:
+   - Navigate to `/register` to create a new employee account.
+   - After registration, you are redirected to `/login`.
+
+3. **Welcome Page**:
+   - After logging in, you are redirected to `/welcome`.
+   - The page displays the logged-in employee's name and provides a logout option.
 
 ---
 

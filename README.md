@@ -116,11 +116,24 @@ The following endpoints are available in the application. Each endpoint is assoc
 
 ### Screenshots
 1. Login Page
+
+   ![image](https://github.com/user-attachments/assets/5a80fe3b-771c-4eca-8e47-2b2d6599346b)
    
 2. Registration Page
+
+   ![image](https://github.com/user-attachments/assets/ef612184-7718-44d5-91d9-bdd6d67aeb66)
    
 3. Welcome Page
 
+   - After registering and loing to login id: Panav and Password: Pass@1234
+   ![image](https://github.com/user-attachments/assets/1d8083e9-80b6-42a3-a091-1a785aae2839)
+
+   - After registering and loing to login id: Sanjay123 and Password: pass@123
+   ![image](https://github.com/user-attachments/assets/1a23246d-3c0c-4ce4-a46b-758e0032f269)
+
+4. Database Schema 
+
+   ![image](https://github.com/user-attachments/assets/efb3fcb4-90c5-4eae-a78d-a0b3542f896c)
 
 
 ---
